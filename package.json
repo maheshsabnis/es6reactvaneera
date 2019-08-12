@@ -1,0 +1,17 @@
+{
+    "name": "esjs",
+    "version": "1.0.0",
+    "description": "1. Declarations\r    1. The 'var' keyword to declare the variable\r    2. This is the 'dynamic declaration' aka 'late binding'\r    3. The Function Scope Declaration by default\r    4. The type of declaration will be set based on right-hand-side of the declaration expression.\r 2. Equality Syntaxes\r    1. == value equality\r    2. === deep equality\r 3. Objects\r    1. 'Everything' is object\r       1. string, number, function, array, object\r    2. Object Types \r       1. function declared object\r       2. Date object\r       3. object literal aka JSON objects\r          1. The Key:Value pair\r          2. Syntax: var obj = {KEY1:VALUE1,.....}; \r 4. Functions\r    1. Closed-Type functios aka function with name  and body\r       1. function abc(){......}\r       2. May return a single object using \r          1. return{}; syntax\r          2. Everything is inside {} of return is 'public' by default\r    2. Reference type functions aka a variable stores reference of function\r       1. var x =function(){......}\r       2. All 'this' referred declarations are public by default\r    3. Immediately-Invoked-Function-Expression (IIFE) aka self-executable functions\r 5. Expressions\r 6. Strings\r 7. Modules (ES6)\r    1. Object Oriented Programming\r 8. Compilation (ES6)",
+    "main": "demoobject.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.3",
+        "babel-preset-es2015": "^6.24.1"
+    }
+}
