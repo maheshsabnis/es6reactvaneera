@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="./../build/dynamicdom.build.js"></script>
+    <script>
+        window.onload = function() {
+            var student = new Student();
+            var students = student.getStudents();
+            var trhead = "<tr>";
+            // iterate over properties of Student[0]th record    
+            for (var i in students[0]) {
+                trhead += "<td>" + i + "</td>";
+            }
+            trhead += "</tr>";
+            document.getElementById('thead').innerHTML = trhead;
+
+            var btnadd = document.getElementById('btnadd');
+            btnadd.addEventListener('click', function() {
+                var std = {};
+                std.Id = document.getElementById('id').value;
+                std.Name = document.getElementById('name').value;
+                students = student.addStudent(std);
+                generateRows(students);
+            }, false);
+
+            var btnclear = document.getElementById('btnclear');
+            btnclear.addEventListener('click', function() {
+                document.getElementById('id').value = "";
+                document.getElementById('name').value = "";
+            }, false);
+
+            function generateRows(students) {
+                var tr;
+                for (var i = 0; i < students.length; i++) {
+                    tr += "<tr><td>" + students[i].Id + "</td><td>" + students[i].Name + "</td></tr>";
+                }
+
+                document.getElementById('tbody').innerHTML = tr;
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="id" class="c1">
+    <br>
+    <input type="text" id="name" class="c1">
+    <br>
+    <input type="button" id="btnadd" value="Add">
+    <input type="button" id="btnclear" value="Clear">
+    <table>
+        <thead id=thead>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+
+</body>
+
+</html>

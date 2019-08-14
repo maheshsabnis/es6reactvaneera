@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="./../build/mathclass.build.js"></script>
+    <script>
+        window.onload = function() {
+            var obj = new MathClass();
+            var btn = document.getElementById('btn');
+            btn.addEventListener('click', function() {
+                var n1 = document.getElementById('txt1').value;
+                var n2 = document.getElementById('txt2').value;
+                var res = obj.add(parseInt(n1), parseInt(n2));
+                document.getElementById('txt3').value = res;
+            }, false);
+
+
+            var btn2 = document.getElementById('btn2');
+            btn2.addEventListener('click', function() {
+                var n1 = document.getElementById('txt1').value;
+                var n2 = document.getElementById('txt2').value;
+                var res = obj.mult(parseInt(n1), parseInt(n2));
+                document.getElementById('txt3').value = res;
+            }, false);
+
+            var btn3 = document.getElementById('btn3');
+            btn3.addEventListener('click', function() {
+                try {
+                    var n1 = document.getElementById('txt1').value;
+                    var n2 = document.getElementById('txt2').value;
+                    var res = obj.div(parseInt(n1), parseInt(n2));
+                    document.getElementById('txt3').value = res;
+                } catch (e) {
+                    document.getElementById('txt3').value = e;
+                }
+            }, false);
+
+            var btn1 = document.getElementById('btn1');
+
+            btn1.addEventListener('click', function() {
+                // var inputs = document.getElementsByTagName('input');
+                var inputs = document.getElementsByClassName('c1');
+                for (var i = 0; i < inputs.length; i++) {
+                    inputs[i].value = '';
+                }
+            }, false);
+
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="txt1" value="" class="c1">
+    <br>
+    <input type="text" id="txt2" value="" class="c1">
+    <br>
+    <input type="text" id="txt3" value="" class="c1">
+    <br>
+    <input type="button" id="btn" value="Add">
+    <input type="button" id="btn2" value="Mult">
+    <input type="button" id="btn3" value="Div">
+    <input type="button" id="btn1" value="Clear">
+
+</body>
+
+</html>

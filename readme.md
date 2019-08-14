@@ -90,9 +90,36 @@
       1. If a method is acceting callback function as input parameter then use Arrow Operator as input parameter instaed of Callback function
    6. String and its methods
    7. Object Oriented programming
+      1. Class
+         1. Everything is public
+         2. The 'this' scope for the public access for data members
+         3. The 'extends' keyword for inheritance
+         4. Use Oops for modularity
+      2. No support for method overloading
+         1. But there is a support for 'rest' parameter
+            1. ...<NAME-OF-PARAMETER>
+               1. internally this is used as an 'arguments' array with the expression as
+                  1. arguments = Object.assing({},arguments)
    8. Modules
 3. Programming 
    1. Transpile the ES6 JavaScript in ES 5 or ES 3
    2. npm install -g @babel/core @babel/cli @babel/preset-es2015
    3. Use babel cli for transoilation
       1. babel --presets es2015 <source-file>.js -o <Target-Path>/<targetouput>.js  
+
+#==================================================================================================================================================
+
+# JavaScript DOM Programming
+1. The 'window' object, that represents the current browser instance
+2. The 'document' object, representing the 'current DOM in window object' 
+   1. document.getElementById('<Id of DOM Element>') , return a single DOM object
+   2. document.
+      1. getElementsByName('<name attribute>')
+      2. getElementsByTagName('<DOM tag name>')
+      3. getElementsByClassName('<class attribute>')
+   3. Eventing System
+      1. document.addEventListener('<event-name>', callback function to invoke for event, <boolean to keep event attached >), method to define an event for DOM Element(s)
+         1. onChange --> change
+         2. onBlur --> blur
+         3. onClick --> click
+         4. onKeyUp --> keyup
